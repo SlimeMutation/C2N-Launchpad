@@ -1,0 +1,240 @@
+package com.bobabrewery.domain.resp;
+
+import lombok.*;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.List;
+
+/**
+ * <p>
+ *
+ * </p>
+ *
+ * @author yunmengmeng
+ * @since 2022-01-13
+ */
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(callSuper = false)
+public class ProductContractVO implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+    public static final String ID = "id";
+    public static final String NAME = "name";
+    public static final String DESCRIPTION = "description";
+    public static final String IMG = "img";
+    public static final String STATUS = "status";
+    public static final String AMOUNT = "amount";
+    public static final String WITHDRAWED = "withdrawed";
+    public static final String SALE_CONTRACT_ADDRESS = "sale_contract_address";
+    public static final String TOKEN_ADDRESS = "token_address";
+    public static final String FOLLOWER = "follower";
+    public static final String TGE = "tge";
+    public static final String PROJECT_WEBSITE = "project_website";
+    public static final String ABOUT_HTML = "about_html";
+    public static final String REGISTRATION_TIME_STARTS = "registration_time_starts";
+    public static final String REGISTRATION_TIME_ENDS = "registration_time_ends";
+    public static final String SALE_START = "sale_start";
+    public static final String SALE_END = "sale_end";
+    public static final String MAX_PARTICIPATION = "max_participation";
+    public static final String TOKEN_PRICE_IN_ETH = "token_price_in_ETH";
+    public static final String TOTAL_TOKENS_SOLD = "total_tokens_sold";
+    public static final String AMOUNT_OF_TOKENS_TO_SELL = "amount_of_tokens_to_sell";
+    public static final String TOTAL_RAISED = "total_raised";
+    public static final String SYMBOL = "symbol";
+    public static final String DECIMALS = "decimals";
+    public static final String UNLOCK_TIME = "unlock_time";
+    public static final String MEDIAS = "medias";
+    public static final String NUMBER_OF_REGISTRANTS = "number_of_registrants";
+    public static final String VESTING = "vesting";
+    public static final String TRICKER = "tricker";
+    public static final String TOKEN_NAME = "token_name";
+    public static final String CREATE_TIME = "create_time";
+    public static final String CREATE_USERNAME = "create_username";
+    public static final String UPDATE_USERNAME = "update_username";
+    public static final String UPDATE_TIME = "update_time";
+
+    /**
+     * id
+     */
+    private Integer id;
+
+    /**
+     * 项目名称
+     */
+    private String name;
+
+    /**
+     * 项目描述
+     */
+    private String description;
+
+    /**
+     * 项目图标地址
+     */
+    private String img;
+
+    /**
+     * 项目状态
+     */
+    private Integer status;
+
+    /**
+     * 当前币种质押个数
+     */
+    private String amount;
+
+    /**
+     * sale合约地址
+     */
+    private String saleContractAddress;
+
+    /**
+     * bre合约地址
+     */
+    private String tokenAddress;
+
+    /**
+     * ?地址
+     */
+    private String paymentToken;
+
+    /**
+     * ins或推特的follow数
+     */
+    private Integer follower;
+
+    /**
+     * tge、时间
+     */
+    private Long tge;
+
+    /**
+     * projectWebsite
+     */
+    private String projectWebsite;
+
+    /**
+     * about_html
+     */
+    private String aboutHtml;
+
+    /**
+     * registration 开始时间
+     */
+    private Long registrationTimeStarts;
+
+    /**
+     * registration 结束时间
+     */
+    private Long registrationTimeEnds;
+
+    /**
+     * sale开始时间
+     */
+    private Long saleStart;
+
+    /**
+     * sale结束时间
+     */
+    private Long saleEnd;
+
+    /**
+     * 硬顶
+     */
+    private String maxParticipation;
+
+    /**
+     * Token price
+     */
+    private String tokenPriceInPT;
+
+    /**
+     * 所有已卖的token个数
+     */
+    private String totalTokensSold;
+
+    /**
+     * 质押币种
+     */
+    private String amountOfTokensToSell;
+
+    /**
+     * 质押币种单位
+     */
+    private String totalRaised;
+
+    /**
+     * 币种单位（缩写）
+     */
+    private String symbol;
+
+    /**
+     * 数位
+     */
+    private Integer decimals;
+
+    /**
+     * 解锁时间
+     */
+    private Long unlockTime;
+
+    /**
+     * 媒体链接
+     */
+    private String medias;
+
+    /**
+     * 注册人数
+     */
+    private Integer numberOfRegistrants;
+
+    private String vesting;
+
+    private String tricker;
+
+    /**
+     * token名
+     */
+    private String tokenName;
+    /**
+     * roi
+     */
+    private String roi;
+
+    private List<Long> vestingPortionsUnlockTime;
+
+    private List<Long> vestingPercentPerPortion;
+
+    /**
+     * 创建时间
+     */
+    private Long createTime;
+
+    /**
+     * 更新时间
+     */
+    private Long updateTime;
+
+    private Integer type;
+
+    private String cardLink;
+    /**
+     * 转推任务的推文ID
+     */
+    private String tweetId;
+
+    /**
+     * 链ChainID
+     */
+    private Integer chainId;
+
+    private Integer paymentTokenDecimals;
+
+    private BigDecimal currentPrice;
+
+
+}

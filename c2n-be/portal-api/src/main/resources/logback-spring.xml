@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds">
+    <!--使用springboot-logback默认配置-->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+
+
+    <!--引用springboot的application.properties/yml中的属性-->
+    <springProperty scope="context" name="projectName" source="spring.application.name"/>
+
+    <!--开发环境日志策略 仅开启控制台日志-->
+    <springProfile name="dev">
+        <root level="info">
+            <appender-ref ref="CONSOLE"/>
+        </root>
+    </springProfile>
+
+    <!--测试环境日志策略 控制台-->
+    <springProfile name="test">
+        <include resource="org/springframework/boot/logging/logback/file-appender.xml"/>
+        <root level="info">
+            <appender-ref ref="FILE"/>
+            <appender-ref ref="CONSOLE"/>
+        </root>
+    </springProfile>
+
+    <!--线上环境日志策略 日志文件-->
+    <springProfile name="prod">
+        <include resource="org/springframework/boot/logging/logback/file-appender.xml"/>
+        <root level="info">
+            <appender-ref ref="FILE"/>
+        </root>
+    </springProfile>
+</configuration>

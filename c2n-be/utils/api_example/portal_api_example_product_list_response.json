@@ -1,0 +1,43 @@
+{
+  "code": 200,
+  "data": {
+    "status": 0,
+    "amount": "10000000000000000000000", // totalTokens
+    "saleContractAddress": "0xbE1f0717E4Bfd6b3cAE527a543FdbA049671902f", // saleAddress
+    "tokenAddress": "0x8332c63860eBAf9eCb1e61fb1829C76D2B2A1cB7", // saleToken
+    "paymentToken": "200",
+    "follower": 0,
+    "tge": 1734365862000, // tokensUnlockTime
+    "projectWebsite": "http://404.com",
+    "aboutHtml": "http://404.com/about.html",
+    "registrationTimeStarts": 1714365862000, //  registrationStart
+    "registrationTimeEnds": 1723365862000, // registrationEnd
+    "saleStart": 1723366462000, // saleStartTime
+    "saleEnd": 1723452862000, //saleEndTime
+    "maxParticipation": "10",
+    "tokenPriceInPT": "100000000000", //tokenPriceInEth
+    "totalTokensSold": "1",
+    "amountOfTokensToSell": "30",
+    "totalRaised": "111",
+    "symbol": "222",
+    "decimals": 18, // 18
+    "unlockTime": 1734365862000, // tokensUnlockTime
+    "medias": null,
+    "numberOfRegistrants": 1,
+    "vesting": null,
+    "tricker": null,
+    "tokenName": "DemoToken",
+    "roi": "1",
+    "vestingPortionsUnlockTime": null,
+    "vestingPercentPerPortion": null,
+    "createTime": 1714019107000,
+    "updateTime": 1714019107000,
+    "type": 1,
+    "cardLink": "http://card_link.com",
+    "tweetId": "tweet_id",
+    "chainId": 11155111, // 11155111
+    "paymentTokenDecimals": 18, // 18
+    "currentPrice": 0
+  },
+  "message": "success"
+}

@@ -1,0 +1,24 @@
+@media (max-width: 769px) {
+  html {
+    font-size: 500%;
+  }
+  body, html,
+  header, footer,
+  .header, .footer{
+    width: 100%;
+  }
+  .main-body{
+    width: 100%;
+  }
+  
+  .main-wrapper,
+  .main-body,
+  .main-content {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .main-content {
+    padding: 0 15px;
+  }
+}

@@ -1,0 +1,42 @@
+
+### server /boba/product/list
+GET {{url}}/boba/product/list
+Accept: application/json
+
+
+### server /boba/product/base_info
+GET {{url}}/boba/product/base_info?productId=3
+
+
+### /boba/encode/sign_registration
+# 200 ok
+POST {{url}}/boba/encode/sign_registration?userAddress=t00000&contractAddress=0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
+
+### /boba/encode/sign_participation
+# 200 ok
+POST {{url}}/boba/encode/sign_participation?userAddress=t00000&amount=333&contractAddress=0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
+
+### 更新测试数据 /boba/update
+# 使用 curl 命令:
+# curl -X POST \
+# http://localhost:30001/boba/update \
+# -H 'Content-Type: application/json' \
+# -d '{ "id": 3, "saleAddress": "0xbE1f0717E4Bfd6b3cAE527a543FdbA049671902f", "saleToken": "0x8332c63860eBAf9eCb1e61fb1829C76D2B2A1cB7", "tokenPriceInPT": "200000000000", "totalTokens": 10000000000000000000000, "saleEndTime": "1715243720000", "tokensUnlockTime": "1715243720000", "registrationStart": "1715243720000", "registrationEnd": "1715243720000", "saleStartTime": "1715243720000" }'
+
+POST {{url}}/boba/update
+Content-Type: application/json
+
+{
+  "id": 3,
+  "saleAddress": "0xbE1f0717E4Bfd6b3cAE527a543FdbA049671902f",
+  "saleToken": "0x8332c63860eBAf9eCb1e61fb1829C76D2B2A1cB7",
+  "tokenPriceInPT": "200000000000",
+  "totalTokens": 10000000000000000000000,
+  "saleEndTime": "1715243720000",
+  "tokensUnlockTime": "1715243720000",
+  "registrationStart": "1715243720000",
+  "registrationEnd": "1715243720000",
+  "saleStartTime": "1715243720000"
+}

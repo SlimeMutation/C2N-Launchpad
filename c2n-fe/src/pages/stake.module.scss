@@ -1,0 +1,63 @@
+@import "@src/styles/var.scss";
+
+.intro {
+  // padding-top: var(--header-height);
+  padding-top: 1px;
+  color: #ffffff;
+
+  h2 {
+    color: #ffffff;
+  }
+}
+
+.container {
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.84) 18%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  background-image: url(~@src/assets/images/pools_bg.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: #000000;
+}
+
+.stake-title,
+.info {
+  margin-top: 0px;
+}
+
+.stake-title {
+  width: 100%;
+  font-size: 0.4rem;
+}
+
+.info {
+  width: 100%;
+  padding: 30px 30px;
+  border-radius: 6px;
+  background: #303030a0;
+  font-size: 0.2rem;
+  line-height: 28px;
+  font-family: PingfangSC, Roboto;
+}
+
+.staking {
+  width: 100%;
+  padding-bottom: 60px;
+  background-color: transparent;
+}
+
+.wallet-button {
+  width: 287px;
+  height: 54px;
+}
+
+.link {
+  color: #ffb852;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}

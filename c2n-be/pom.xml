@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <modules>
+        <module>common</module>
+        <module>portal-api</module>
+    </modules>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.7</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.bobabrewery</groupId>
+    <artifactId>bobabrewery</artifactId>
+    <version>0.0.1beta</version>
+    <name>bobabrewery</name>
+    <description>bobabrewery</description>
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <springboot.version>2.6.7</springboot.version>
+        <spring-cloud.version>2021.0.3</spring-cloud.version>
+        <mybatis.version>2.2.2</mybatis.version>
+        <mysql.version>8.0.30</mysql.version>
+        <hutools.version>5.7.19</hutools.version>
+        <commons-lang.version>2.6</commons-lang.version>
+        <druid.version>1.2.11</druid.version>
+        <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
+        <servlet.version>4.0.1</servlet.version>
+        <telegrambot.verson>5.7.1</telegrambot.verson>
+        <web3j.version>4.9.3</web3j.version>
+        <fast.json.version>1.2.83</fast.json.version>
+        <easyexcel.version>3.1.1</easyexcel.version>
+        <docker.region>registry.ap-southeast-1.aliyuncs.com</docker.region>
+        <docker.username>chengxianglong@ecreditpal</docker.username>
+        <docker.password>Pailie2022</docker.password>
+        <docker.push>false</docker.push>
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <!--Spring Cloud 相关依赖-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bobabrewery</groupId>
+                <artifactId>common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bobabrewery</groupId>
+                <artifactId>partner-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bobabrewery.repo</groupId>
+                <artifactId>metaderby-repo</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-lang</groupId>
+                <artifactId>commons-lang</artifactId>
+                <version>${commons-lang.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-jwt</artifactId>
+                <version>${hutools.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-crypto</artifactId>
+                <version>${hutools.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-extra</artifactId>
+                <version>${hutools.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.web3j</groupId>
+                <artifactId>core</artifactId>
+                <version>${web3j.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fast.json.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>easyexcel</artifactId>
+                <version>${easyexcel.version}</version>
+            </dependency>
+
+
+        </dependencies>
+    </dependencyManagement>
+
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!--maven package 时不执行 test-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.22.1</version>
+                    <configuration>
+                        <skipTests>true</skipTests>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <configuration>
+                        <excludes>
+                            <exclude>
+                                <groupId>org.projectlombok</groupId>
+                                <artifactId>lombok</artifactId>
+                            </exclude>
+                        </excludes>
+                        <image>
+                            <name>${docker.region}/brewery/${project.artifactId}:${project.version}</name>
+                            <publish>${docker.push}</publish>
+                            <env>
+                                <BPE_DELIM_JAVA_TOOL_OPTIONS xml:space="preserve"> </BPE_DELIM_JAVA_TOOL_OPTIONS>
+                                <BPE_APPEND_JAVA_TOOL_OPTIONS>-Xmx512m</BPE_APPEND_JAVA_TOOL_OPTIONS>
+                                <BPE_APPEND_JAVA_TOOL_OPTIONS>-Xms512m</BPE_APPEND_JAVA_TOOL_OPTIONS>
+                            </env>
+                        </image>
+                        <docker>
+                            <publishRegistry>
+                                <username>${docker.username}</username>
+                                <password>${docker.password}</password>
+                                <url>https://${docker.region}</url>
+                            </publishRegistry>
+                        </docker>
+                    </configuration>
+                </plugin>
+                <!--生成文档插件-->
+                <plugin>
+                    <groupId>com.github.shalousun</groupId>
+                    <artifactId>smart-doc-maven-plugin</artifactId>
+                    <version>2.2.7</version>
+                    <configuration>
+                        <!--指定生成文档的使用的配置文件,配置文件放在自己的项目中-->
+                        <configFile>${basedir}/docs/config/smart-doc.json</configFile>
+                        <!--指定项目名称-->
+                        <projectName>${project.name}</projectName>
+                        <!--smart-doc实现自动分析依赖树加载第三方依赖的源码，如果一些框架依赖库加载不到导致报错，这时请使用excludes排除掉-->
+                        <excludes>
+                            <!--格式为：groupId:artifactId;参考如下-->
+                            <!--也可以支持正则式如：com.alibaba:.* -->
+                            <!--<exclude>com.alibaba:fastjson</exclude>-->
+                        </excludes>
+                        <!--includes配置用于配置加载外部依赖源码,配置后插件会按照配置项加载外部源代码而不是自动加载所有，因此使用时需要注意-->
+                        <!--smart-doc能自动分析依赖树加载所有依赖源码，原则上会影响文档构建效率，因此你可以使用includes来让插件加载你配置的组件-->
+                        <includes>
+                            <!--格式为：groupId:artifactId;参考如下-->
+                            <!--也可以支持正则式如：com.alibaba:.* -->
+                            <!--<include>com.alibaba:fastjson</include>-->
+                        </includes>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <!--如果不需要在执行编译时启动smart-doc，则将phase注释掉-->
+                            <!--                            <phase>compile</phase>-->
+                            <goals>
+                                <!--smart-doc提供了html、openapi、markdown等goal，可按需配置-->
+                                <goal>html</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>

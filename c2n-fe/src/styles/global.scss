@@ -1,0 +1,109 @@
+@import "./var.scss";
+@import "./position.scss";
+@import "./icons.scss";
+@import "./keyframes.scss";
+@import "./media.scss";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: ArialMT, Arial, PingFangSC, Roboto, LucidaGrande, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.loading-element {
+  animation: loadingAnime 3s linear 1s infinite;
+  background-size: 200% 200%;
+  background-image: linear-gradient(
+    90deg,
+    #92929230 0%,
+    #cecece50 50%,
+    #92929230 100%
+  );
+}
+
+@keyframes loadingAnime {
+  0% {
+    background-position: 10% 0%;
+  }
+  50% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0%;
+  }
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-content {
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.container {
+  min-height: 100vh;
+}
+
+.logo {
+  display: inline-block;
+  width: 32px;
+  height: 33px;
+  margin-right: 15px;
+  vertical-align: middle;
+  background-image: url(~@src/assets/icons/logo.png);
+}
+
+/* hide input arrows */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button  {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"]  {
+  -moz-appearance: none;
+}
+
+.disabled {
+  background-color: #b0b0b0 !important;
+  color: #585858;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+}
+
+.icon ~ * {
+  vertical-align: middle;
+}
+
+.ant-popover-arrow-content,
+.ant-popover-arrow-content::before {
+  background: #000 !important;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #ffb852 !important;
+}

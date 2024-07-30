@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+<modelVersion>4.0.0</modelVersion>
+<groupId>com.bobabrewery</groupId>
+<artifactId>flyway-brewery</artifactId>
+<description>brewery数据库</description>
+<version>1.0.0</version>
+<properties>
+    <mysql.version>8.0.20</mysql.version>
+    <flyway.version>7.15.0</flyway.version>
+    <encoding>UTF-8</encoding>
+</properties>
+
+<dependencies>
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>${mysql.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.flywaydb</groupId>
+        <artifactId>flyway-core</artifactId>
+        <version>${flyway.version}</version>
+    </dependency>
+</dependencies>
+
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-maven-plugin</artifactId>
+            <version>6.2.0</version>
+            <configuration>
+                <url>jdbc:mysql://127.0.0.1:3306/brewery?useUnicode=true&nbsp;characterEncoding=UTF-8&nbsp;allowMultiQueries=true&nbsp;rewriteBatchedStatements=true&nbsp;useSSL=false&nbsp;serverTimezone=GMT%2B8</url>
+                <user>root</user>
+                <password>123456</password>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+</project>

@@ -1,0 +1,15 @@
+{
+    "outPath": "docs/html",
+    "serverUrl": "http://127.0.0.1:30001",
+    "pathPrefix": "/boba",
+    "sortByTitle": true,
+    "allInOne": true,
+    "style": "xt256",
+    "showAuthor": false,
+    "createDebugPage": true,
+    "appToken": "ce27a4e37e284ea0bd23c93898a068c6",
+    "openUrl": "https://docs.nommale.ml/api",
+    "replace": true,
+    "debugEnvName": "测试环境",
+    "debugEnvUrl": "https://brewery.nommale.ml"
+}

@@ -1,0 +1,59 @@
+.modal {
+  width: 732px;
+  height: 392px;
+  padding: 45px 56px;
+}
+.title{
+  color: #000000;
+  font-size: 0.22rem;
+  line-height: 60px;
+  text-align: center;
+}
+
+.label {
+  color: #505050;
+  text-align: right;
+}
+
+.input {
+  width: 100%;
+  height: 54px;
+  margin-top: 30px;
+  position: relative;
+  line-height: 54px;
+}
+
+.number {
+  width: 100%;
+  height: 54px;
+  line-height: 54px;
+  background: #F4F4F4;
+  border-radius: 4px;
+}
+
+.unit {
+  position: absolute;
+  right: 22px;
+  top: 0;
+}
+
+.from-input {
+  color: #A3A3A3;
+}
+
+.from-input .number{
+  padding: 0 11px;
+}
+
+.desc {
+  font-size: 0.18rem;
+  background-color: #cccccc;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.maximum {
+  font-size: 0.20rem;
+  font-weight: bold;
+  cursor: pointer;
+}

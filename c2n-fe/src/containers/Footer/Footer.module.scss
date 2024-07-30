@@ -1,0 +1,47 @@
+.footer {
+  width: 100%;
+  min-height: 200px;
+  background: #202020;
+  color: #dbdbdb;
+  .logo {
+    background-image: url(~@src/assets/images/c2n_logo.png);
+    width: 150px;
+    height: 50px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  :global .main-content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 47px;
+  }
+
+  :global h4 {
+    margin-bottom: 22px;
+    font-size: 0.24rem;
+    font-weight: bold;
+    color: #dbdbdb;
+  }
+
+  :global a {
+    display: block;
+    margin-bottom: 22px;
+    font-size: 0.18rem;
+    color: #dbdbdb;
+
+    &:hover {
+      color: #ffb852;
+    }
+  }
+
+  :global .app-name {
+    font-size: 0.24rem;
+    font-family: PingfangSC, Roboto;
+  }
+
+  :global .col-1 {
+    flex-basic: 40%;
+    margin-bottom: 22px;
+  }
+}

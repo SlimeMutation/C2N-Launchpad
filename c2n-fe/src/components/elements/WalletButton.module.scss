@@ -1,0 +1,24 @@
+div.wallet-button {
+  width: 160px;
+  height: 48px;
+  border-radius: 27.5px;
+  box-shadow: 0 2px 20px 10px rgba(0, 0, 0, 0.5);
+  // position: absolute;
+  // top: 160px;
+  // right: 0;
+  z-index: 100;
+  // background-image: linear-gradient(179deg, #D7FF1E 0%, #FFB852 100%);
+  text-align: center;
+  color: #ffb852;
+  line-height: 48px;
+  cursor: pointer;
+  font-family: PingfangSC, Roboto;
+
+  &:hover {
+    filter: brightness(1.1);
+    box-shadow: 5px 5px 50px 10px #d7ff1e11;
+  }
+}
+
+// @media (max-width: 769px) {
+// }

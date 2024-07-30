@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bobabrewery.repo.common.mapper.ProductContractMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bobabrewery.repo.common.model.Project">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="description" property="description"/>
+        <result column="img" property="img"/>
+        <result column="twitter_name" property="twitterName"/>
+        <result column="status" property="status"/>
+        <result column="amount" property="amount"/>
+        <result column="sale_contract_address" property="saleContractAddress"/>
+        <result column="token_address" property="tokenAddress"/>
+        <result column="payment_token" property="paymentToken"/>
+        <result column="follower" property="follower"/>
+        <result column="tge" property="tge"/>
+        <result column="project_website" property="projectWebsite"/>
+        <result column="about_html" property="aboutHtml"/>
+        <result column="registration_time_starts" property="registrationTimeStarts"/>
+        <result column="registration_time_ends" property="registrationTimeEnds"/>
+        <result column="sale_start" property="saleStart"/>
+        <result column="sale_end" property="saleEnd"/>
+        <result column="max_participation" property="maxParticipation"/>
+        <result column="token_price_in_PT" property="tokenPriceInPT"/>
+        <result column="total_tokens_sold" property="totalTokensSold"/>
+        <result column="amount_of_tokens_to_sell" property="amountOfTokensToSell"/>
+        <result column="total_raised" property="totalRaised"/>
+        <result column="symbol" property="symbol"/>
+        <result column="decimals" property="decimals"/>
+        <result column="unlock_time" property="unlockTime"/>
+        <result column="medias" property="medias"/>
+        <result column="number_of_registrants" property="numberOfRegistrants"/>
+        <result column="vesting" property="vesting"/>
+        <result column="tricker" property="tricker"/>
+        <result column="token_name" property="tokenName"/>
+        <result column="roi" property="roi"/>
+        <result column="vesting_portions_unlock_time" property="vestingPortionsUnlockTime"/>
+        <result column="vesting_percent_per_portion" property="vestingPercentPerPortion"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="type" property="type"/>
+        <result column="card_link" property="cardLink"/>
+        <result column="tweet_id" property="tweetId"/>
+        <result column="chain_id" property="chainId"/>
+        <result column="payment_token_decimals" property="paymentTokenDecimals"/>
+        <result column="current_price" property="currentPrice"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, description, img,twitter_name, status, amount, sale_contract_address, token_address, payment_token, follower, tge, project_website, about_html, registration_time_starts, registration_time_ends, sale_start, sale_end, max_participation, token_price_in_PT, total_tokens_sold, amount_of_tokens_to_sell, total_raised, symbol, decimals, unlock_time, medias, number_of_registrants, vesting, tricker, token_name, roi, vesting_portions_unlock_time, vesting_percent_per_portion, create_time, update_time,`type`,card_link,tweet_id,chain_id,payment_token_decimals,current_price
+    </sql>
+
+    <!-- 通用修改列 -->
+    <sql id="Base_Column_Update">
+        <set>
+            <if test="entity.name != null">name=#{entity.name},</if>
+            <if test="entity.description != null">description=#{entity.description},</if>
+            <if test="entity.img != null">img=#{entity.img},</if>
+            <if test="entity.twitterName != null">twitter_name=#{entity.twitterName},</if>
+            <if test="entity.status != null">status=#{entity.status},</if>
+            <if test="entity.amount != null">amount=#{entity.amount},</if>
+            <if test="entity.saleContractAddress != null">sale_contract_address=#{entity.saleContractAddress},</if>
+            <if test="entity.tokenAddress != null">token_address=#{entity.tokenAddress},</if>
+            <if test="entity.follower != null">follower=#{entity.follower},</if>
+            <if test="entity.tge != null">tge=#{entity.tge},</if>
+            <if test="entity.projectWebsite != null">project_website=#{entity.projectWebsite},</if>
+            <if test="entity.aboutHtml != null">about_html=#{entity.aboutHtml},</if>
+            <if test="entity.registrationTimeStarts != null">
+                registration_time_starts=#{entity.registrationTimeStarts},
+            </if>
+            <if test="entity.registrationTimeEnds != null">registration_time_ends=#{entity.registrationTimeEnds},</if>
+            <if test="entity.saleStart != null">sale_start=#{entity.saleStart},</if>
+            <if test="entity.saleEnd != null">sale_end=#{entity.saleEnd},</if>
+            <if test="entity.maxParticipation != null">max_participation=#{entity.maxParticipation},</if>
+            <if test="entity.tokenPriceInPT != null">token_price_in_PT=#{entity.tokenPriceInPT},</if>
+            <if test="entity.totalTokensSold != null">total_tokens_sold=#{entity.totalTokensSold},</if>
+            <if test="entity.amountOfTokensToSell != null">amount_of_tokens_to_sell=#{entity.amountOfTokensToSell},</if>
+            <if test="entity.totalRaised != null">total_raised=#{entity.totalRaised},</if>
+            <if test="entity.symbol != null">symbol=#{entity.symbol},</if>
+            <if test="entity.decimals != null">decimals=#{entity.decimals},</if>
+            <if test="entity.unlockTime != null">unlock_time=#{entity.unlockTime},</if>
+            <if test="entity.medias != null">medias=#{entity.medias},</if>
+            <if test="entity.numberOfRegistrants != null">number_of_registrants=#{entity.numberOfRegistrants},</if>
+            <if test="entity.vesting != null">vesting=#{entity.vesting},</if>
+            <if test="entity.tricker != null">tricker=#{entity.tricker},</if>
+            <if test="entity.tokenName != null">token_name=#{entity.tokenName},</if>
+            <if test="entity.roi != null">roi=#{entity.roi},</if>
+            <if test="entity.vestingPortionsUnlockTime != null">
+                vesting_portions_unlock_time=#{entity.vestingPortionsUnlockTime},
+            </if>
+            <if test="entity.vestingPercentPerPortion != null">
+                vesting_percent_per_portion=#{entity.vestingPercentPerPortion},
+            </if>
+            <if test="entity.createTime != null">create_time=#{entity.createTime},</if>
+            <if test="entity.updateTime != null">update_time=#{entity.updateTime},</if>
+        </set>
+    </sql>
+
+    <select id="getById" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List"></include> FROM product_contract WHERE id = #{id}
+    </select>
+
+    <update id="updateById">
+        UPDATE product_contract
+        <include refid="Base_Column_Update"></include>
+        WHERE id=#{entity.id}
+    </update>
+
+    <update id="updateByProduct">
+        UPDATE product_contract
+        SET sale_contract_address    = #{saleAddress},
+            token_address            = #{saleToken},
+            token_price_in_PT        = #{tokenPriceInPT},
+            total_tokens_sold        = #{totalTokens},
+            sale_end                 = #{saleEndTime},
+            unlock_time              = #{tokensUnlockTime},
+            registration_time_starts = #{registrationStart},
+            registration_time_ends   = #{registrationEnd},
+            sale_start               = #{saleStartTime}
+        WHERE id = #{id}
+    </update>
+    <select id="selectNotEndProduct" resultMap="BaseResultMap">
+        SELECT *
+        FROM product_contract
+        where status > 0
+          and status != 5
+    </select>
+    <select id="list" resultMap="BaseResultMap">
+        SELECT *
+        FROM product_contract
+    </select>
+    <select id="getStatusById" resultType="java.lang.Integer">
+        select status
+        from product_contract
+        where id = #{id}
+    </select>
+    <select id="getSaleContractAddressById" resultType="java.lang.String">
+        select sale_contract_address
+        from product_contract
+        where id = #{id}
+    </select>
+    <select id="selectRegister" resultMap="BaseResultMap">
+        SELECT *
+        FROM product_contract
+        where status >= 1
+          and status &lt;= 2
+    </select>
+    <update id="updateStatus">
+        UPDATE product_contract
+        SET status = #{status}
+        WHERE id = #{id}
+    </update>
+
+    <select id="selectRegisterTest" resultMap="BaseResultMap">
+        SELECT *
+        FROM product_contract
+        where id = 2
+    </select>
+
+    <select id="selectAllStopProject" resultMap="BaseResultMap">
+        select id, token_name
+        from product_contract
+        where `status` >= 3
+    </select>
+
+    <update id="updateCurrentPriceByID">
+        UPDATE product_contract
+        SET current_price = #{currentPrice}
+        WHERE id = #{id}
+    </update>
+</mapper>

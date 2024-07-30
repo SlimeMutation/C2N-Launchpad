@@ -1,0 +1,49 @@
+server:
+    port: 8080
+    servlet:
+        context-path: /boba
+spring:
+    application:
+        name: portal-api
+    datasource: #druid数据源配置
+        druid:
+            url: jdbc:mysql://${DB_HOST:127.0.0.1:3306}/${DB_NAME:brewery}?useUnicode=true&characterEncoding=utf8&useSSL=false
+            username: ${DB_USERNAME:root}
+            password: ${DB_PWD:123456}
+            driver-class-name: com.mysql.cj.jdbc.Driver
+            max-wait: 10000 #获取连接时最大等待时间，单位毫秒
+            initial-size: 10 #初始化时建立物理连接的个数
+            max-active: 100 #最大连接池数量
+            min-idle: 10 #最小连接数
+            time-between-eviction-runs-millis: 3600000 #检测连接的间隔时间
+            min-evictable-idle-time-millis: 300000 #连接的最小生存时间
+            test-while-idle: true  #检测连接是否有效
+            test-on-borrow: false #申请连接时执行validationQuery检测连接是否有效，做了这个配置会降低性能
+            validation-query: SELECT 1 #用来检测连接是否有效的sql
+            filters: stat #监控统计用的filter:stat日志用的filter:log4j防御sql注入的filter:wall
+            stat-view-servlet:
+                url-pattern: /druid/*
+                reset-enable: true #允许清空统计数据
+                login-username: root #监控后台管理账号和密码
+                login-password: root
+            web-stat-filter:
+                url-pattern: /*
+                exclusions: "*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid/*"
+mybatis:
+    mapper-locations: classpath*:mapper/*Mapper.xml
+
+owner:
+    private:
+        key: ${OWNER_PRIVATE_KEY:bcb80398e2ef7c966ba54304e0c64170d183c2c222bb2789d7b17510915ce817}
+
+#telegram:
+#    token: 5001195422:AAFVPBYPJ5RB93TGJgeD51VRfDBtp9sAjwE
+
+#encode:
+#    server: http://127.0.0.1:30002
+
+#staking:
+#    boba: 0x2Dcf9fff0F0422fFE4134048A01e739972798dc6
+#
+#meta-derby:
+#    baseUrl: https://serv3.be.dbytothemoon.com

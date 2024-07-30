@@ -1,0 +1,50 @@
+
+version: '3'
+
+services:
+  portal-api:
+    build: ../portal-api
+    container_name: portal-api
+    image: registry.localdev:5002/bobabrewery/portal-api:0.0.1-snapshot-e9668fa
+    restart: always
+    ports:
+    - 8080:8080
+    env_file:
+      - ./docker-env/portal-api.env
+    networks:
+      - brewery_net
+    depends_on:
+      - mysql-db
+
+
+#  fe:
+#    image: bobabrewery/fe:0.0.1
+#    container_name: fe
+#    restart: always
+#    ports:
+#      - 8018:8018
+#    networks:
+#      - brewery_net
+
+  mysql-db:
+    container_name: brewery-mysql
+    image: library/mysql:5.7.29
+    platform: linux/amd64
+    restart: always
+    volumes:
+      - ./mysql/my.cnf:/etc/my.cnf
+      - ./mysql/init:/docker-entrypoint-initdb.d/
+      - ./mysql/data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - brewery_net
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: brewery
+      MYSQL_LOWER_CASE_TABLE_NAMES: 1
+
+
+networks:
+  brewery_net:
+

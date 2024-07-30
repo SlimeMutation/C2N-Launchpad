@@ -1,0 +1,182 @@
+.pool-card {
+  display: inline-block;
+  width: 100%;
+  min-height: 345px;
+  padding: 30px 50px;
+  border-radius: 10px;
+  position: relative;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.icon {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-image: url('~@src/assets/icons/logo.png');
+}
+
+.product-name {
+  font-size: 0.24rem;
+}
+
+.total-raise-label {
+  font-size: 0.18rem;
+  line-height: 21px;
+}
+
+.total-raise {
+  font-size: 0.30rem;
+  color: #D7FF1E;
+  line-height: 42px;
+}
+
+.timer {
+  display: inline-block;
+  height: 34px;
+  padding: 0 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #00000026;
+  line-height: 34px;
+  white-space: nowrap;
+
+  .counter {
+    display: inline-block;
+    margin-left: 10px;
+    // vertical-align: middle;
+  }
+}
+
+.end-date {
+  display: inline-block;
+  min-width: 80px;
+  margin-left: 10px;
+  font-size: 0.16rem;
+  color: #D7FF1E;
+}
+
+.bottom-info-item {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 26px 0;
+  text-align: center;
+}
+
+.card-progress {
+  $height: 20px;
+  position: relative;
+  cursor: pointer;
+
+  .progress-background {
+    height: 32px;
+    border-radius: 16px;
+    left: 0;
+    right: 0;
+    background: #E9E9E9;
+  }
+
+  .progress-colored {
+    position: absolute;
+    height: 32px;
+    border-radius: 100px 50px 50px 100px;
+    min-width: 0;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(270deg, #4DCC8A 0%, #1EA152 98%);
+
+    &.full {
+      border-radius: 100px;
+    }
+  }
+
+  .progress-text {
+    line-height: 32px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #ffffff;
+    text-align: center;
+  }
+}
+
+.pool-card {
+  .total-raise-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 91px;
+    border: 1px solid #DEDEDE;
+    border-radius: 10px;
+  }
+
+  .total-raise-label {
+    font-size: 0.18rem;
+    line-height: 21px;
+  }
+
+  .total-raise {
+    font-size: 0.22rem;
+    color: #55BC7E;
+    line-height: 21px;
+  }
+
+  .bottom-info-item {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 91px;
+    padding: 26px 0;
+    border: 1px solid #DEDEDE;
+    border-radius: 10px;
+    text-align: center;
+
+  }
+
+  label.label {
+    vertical-align: middle;
+  }
+
+  .followers,
+  .start-date,
+  .token-price {
+    position: relative;
+    font-size: 0.22rem;
+    font-weight: bold;
+
+    .extra {
+      font-size: 0.16rem;
+      font-weight: normal;
+      position: absolute;
+      color: #A3A3A3;
+      top: 75%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.bottom-icon {
+  margin-right: 5px;
+}
+
+@media (max-width: 769px) {
+  .pool-card {
+    padding: 20px;
+  }
+  .timer {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 10px 0; 
+  }
+}

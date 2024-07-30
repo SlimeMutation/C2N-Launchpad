@@ -1,0 +1,11 @@
+.modal-title {
+    text-align: center;
+    font-family: Arial, Roboto;
+    font-size: 18px;
+}
+
+.share-button {
+    &:hover {
+        filter: brightness(1.1);
+    }
+}

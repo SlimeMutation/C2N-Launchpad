@@ -1,0 +1,12 @@
+{
+  "saleAddress": "0x21eb499756E69d49D866d494e111881767897ad2", // saleContractAddress
+  "saleToken": "0x8332c63860eBAf9eCb1e61fb1829C76D2B2A1cB7", // tokenAddress
+  "saleOwner": "0x0f590970a45d0b4c2dcfcaFF453400eE9B91B317", // tokenAddress
+  "tokenPriceInEth": "100000000000", // tokenPriceInPT
+  "totalTokens": "10000000000000000000000", // amount
+  "saleEndTime": 1715242388, // saleEnd
+  "tokensUnlockTime": 1715244469, // tge
+  "registrationStart": 1715240069, // registrationTimeStarts
+  "registrationEnd": 1715241068, // registrationTimeEnds
+  "saleStartTime": 1715241188 // saleStart
+}

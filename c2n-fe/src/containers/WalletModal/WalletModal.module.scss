@@ -1,0 +1,36 @@
+.connect-button {
+  width: 100%;
+  height: 70px;
+  padding: 0 12px;
+  border-radius: 18px;
+  background-color: #f4f4f4;
+  cursor: pointer;
+  line-height: 70px;
+
+  &:hover {
+    background-color: #b4b4b4;
+  }
+}
+
+.connect-panel {
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+
+.title {
+  font-family: ArialMT, Roboto;
+  font-size: 0.22rem;
+  color: #000000;
+  text-align: center;
+  line-height: 60px;
+}
+
+.icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-size: 80%;
+  background-color: #ffffff;
+  background-position: center;
+  vertical-align: middle;
+}

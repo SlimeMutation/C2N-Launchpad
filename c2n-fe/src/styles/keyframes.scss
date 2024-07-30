@@ -1,0 +1,10 @@
+@keyframes appear{
+  from {
+    top: 50px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,41 @@
+div.transaction-button {
+  // width: 160px;
+  // height: 48px;
+  // border-radius: 27.5px;
+  // box-shadow: 0 2px 20px 10px rgba(0,0,0,0.50);
+  // position: absolute;
+  // top: 0;
+  // right: 0;
+  // background-image: linear-gradient(179deg, #D7FF1E 0%, #FFB852 100%);
+  // text-align: center;
+  // color: #000000;
+  // line-height: 48px;
+  font-size: 0.2rem;
+  cursor: pointer;
+
+  height: 54px;
+  border-radius: 8px;
+  background-color: #ffb852;
+  color: #000000;
+  text-align: center;
+  line-height: 54px;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+
+  // &:hover {
+  //   background-image: linear-gradient(179deg, lighter(#D7FF1E, .1) 0%, #FFB852 100%);
+  // }
+}
+
+div.disabled {
+  background-color: #c0c0c0;
+  background-image: none;
+  color: #585858;
+  cursor: not-allowed;
+
+  &:hover {
+    background-color: #b0b0b0;
+  }
+}

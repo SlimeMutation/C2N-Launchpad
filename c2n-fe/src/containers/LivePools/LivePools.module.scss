@@ -1,0 +1,42 @@
+.live-pools {
+  position: relative;
+  padding-bottom: 64px;
+}
+
+h2.title {
+  margin-top: 47px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 0.40rem;
+}
+
+div.sub-title {
+  margin-top: 31px;
+  margin-bottom: 62px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 0.20rem;
+}
+
+.live-pool-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin-top: 30px;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+}
+
+.empty-text {
+  margin-top: 30px;
+  font-family: ArialMT, Roboto;
+  font-size: 0.20rem;
+  color: #FFFFFF;
+  letter-spacing: 0;
+}

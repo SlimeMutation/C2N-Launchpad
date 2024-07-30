@@ -1,0 +1,357 @@
+.common-padding {
+  padding: 55px 45px;
+}
+
+$line-height: 54px;
+
+div.staking-form {
+  width: 100%;
+  padding-top: 1px;
+  background-color: transparent;
+
+  >* :global {
+    background: #ffffff;
+  }
+
+  :global .input {
+    width: 100%;
+    height: $line-height;
+    border-color: transparent;
+    border-radius: 10px;
+    position: relative;
+    background-color: #f4f4f4;
+    font-size: 0.22rem;
+    line-height: $line-height;
+
+    .number {
+      width: 100%;
+      height: $line-height;
+      padding: 0 20px;
+      border-color: transparent;
+      color: #707070;
+      font-size: 0.22rem;
+      background-color: transparent;
+      vertical-align: middle;
+      line-height: $line-height;
+
+      .ant-input-number-input-wrap :global,
+      .ant-input-number-input :global {
+        height: $line-height;
+        line-height: $line-height;
+      }
+    }
+
+    :global .unit {
+      padding-right: 20px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      line-height: $line-height;
+      color: #707070;
+    }
+
+  }
+
+  :global .input-error {
+    height: $line-height;
+  }
+
+  :global .button {
+    height: $line-height;
+    border-radius: 10px;
+    background-image: linear-gradient(179deg, #4DCC8A 0%, #1EA152 100%);
+    color: #ffffff;
+    font-size: 0.20rem;
+    text-align: center;
+    line-height: $line-height;
+  }
+}
+
+.staking-form .billboard {
+  background-color: transparent;
+}
+
+.billboard {
+  $height: 183px;
+  margin-top: 40px;
+  white-space: nowrap;
+
+
+  :global .label {
+    width: 100%;
+    position: absolute;
+    top: 40px;
+    text-align: center;
+  }
+
+  :global label {
+    font-size: 0.18rem;
+    line-height: 30px;
+  }
+
+  :global .value {
+    width: 100%;
+    position: absolute;
+    top: 90px;
+    font-size: 0.34rem;
+    text-align: center;
+  }
+
+  .card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    height: $height;
+  }
+}
+
+.stake-token {
+  padding: 0 45px;
+  margin-top: 42px;
+  white-space: nowrap;
+  border-radius: 16px 16px 0 0 ;
+  :global .left {
+    margin-top: 40px;
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    line-height: $line-height;
+    vertical-align: top;
+
+    :global .max {
+      color: #55BC7E;
+      cursor: pointer;
+    }
+  }
+
+  :global .right {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    line-height: $line-height;
+
+    :global .button {
+      margin-top: $line-height;
+    }
+  }
+}
+
+.staking-stats{
+  composes: common-padding;
+  padding-top: 1em;
+  border-radius: 0 0 16px 16px;
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 47px;
+
+    .box {
+      flex: 1;
+      min-height: 100px;
+      border: 2px solid #DEDEDE;
+      border-radius: 10px;
+      margin-right: 50px;
+      position: relative;
+      cursor: pointer;
+      transition: all 1s;
+      transform: scale(1);
+
+      &:hover {
+        box-shadow: 2 2px 50px #00000010;
+        // transform: scale(1.05);
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      >* :global {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+    }
+
+    .label {
+      font-size: 0.18rem;
+      line-height: 30px;
+    }
+
+    .value {
+      font-size: 0.30rem;
+      font-family: ArialMT, Roboto;
+      font-weight: bold;
+      line-height: 30px;
+    }
+
+    .extra {
+      font-size: 0.18rem;
+      color: #A3A3A3;
+      line-height: 30px;
+    }
+  }
+}
+
+.withdraw-token {
+  composes: common-padding;
+  margin-top: 42px;
+  white-space: nowrap;
+  :global .wrap {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    line-height: $line-height;
+    vertical-align: top;
+
+    :global .max {
+      color: #55BC7E;
+      cursor: pointer;
+    }
+  }
+  :global .buttons {
+    display: block;
+    margin-top: 28px;
+    white-space: nowrap;
+    
+    :global .button {
+      display: inline-block;
+      width: 49%;
+      margin-right: 2%;
+    }
+  }
+}
+
+.staking-form .total-stat {
+  width: 100%;
+  margin-top: 42px;
+  background-color: transparent;
+  white-space: nowrap;
+
+  .box {
+    position: relative;
+    line-height: 30px;
+    vertical-align: middle;
+    background-color: #ffffff;
+  }
+
+  .label {
+    font-size: 0.20rem;
+    color: #707070;
+  }
+  .value {
+    margin-top: 15px;
+    font-size: 0.34rem;
+    color: #55BC7E;
+  }
+  .extra {
+    margin-top: 15px;
+    font-size: 0.18rem;
+    color: #A3A3A3;
+  }
+}
+
+.staking-form .tiers {
+  margin-top: 30px;
+  padding-bottom: 30px;
+  background-color: transparent;
+}
+
+
+.tier-card {
+  display: inline-block;
+  width: 100%;
+  max-width: 575px;
+  height: 512px;
+  padding: 55px 0;
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  z-index: 0;
+  
+  :global .wrapper {
+    display: inline-block;
+    width: calc(425 / 575 * 100%);
+    height: 414px;    
+    border-radius: 10px;
+    box-shadow: 0 2px 50px 0 rgba(0,0,0,0.15);
+    transition: all 1s;
+    transform: scale(1);
+
+    &:hover {
+      box-shadow: 5px 5px 30px 0 rgba(0,0,0,0.15);
+      transform: scale(1.02);
+    }
+  }
+}
+
+.tier-title {
+  height: 90px;
+  border-bottom: solid 1px #F4F4F4;
+  margin-bottom: 5px;
+  line-height: 90px;
+  font-size: 0.34rem;
+  color: #55BC7E;
+}
+
+.tier-label {
+  font-family: ArialMT, Roboto;
+  color: #707070;
+  font-size: 0.16rem;
+  margin-bottom: 10px;
+}
+
+.tier-value-small,
+.tier-value-medium,
+.tier-value-large {
+  color: #000000;
+  margin-bottom: 8px;
+  font-family: ArialMT, Roboto;
+  font-weight: bold;
+}
+
+.tier-value-small {
+  font-size: 0.18rem;
+}
+
+.tier-value-medium {
+  font-size: 0.30rem;
+}
+
+.tier-value-large {
+  font-size: 0.30rem;
+}
+
+.tier-left-arrow {
+  font-size: 32px;
+  position: absolute;
+  top: 50%;
+  left: .1em;
+  color: #666666;
+}
+
+.tier-right-arrow {
+  font-size: 32px;
+  position: absolute;
+  top: 50%;
+  right: .1em;
+  color: #666666;
+}
+
+@media (max-width: 769px) {
+  .tier-card {
+    width: 100%;
+    height: 512px;
+    padding: 55px 0;
+    :global .wrapper {
+      width: 90%;
+      border: solid 2px rgba(0,0,0,0.05);
+      box-shadow: none;
+    }
+  }
+
+  .tier-left-arrow{
+    left: -5%;
+  }
+  .tier-right-arrow{
+    right: -5%;
+  }
+}

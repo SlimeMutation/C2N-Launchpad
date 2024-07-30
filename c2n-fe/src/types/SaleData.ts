@@ -1,0 +1,32 @@
+import { BigNumber } from 'ethers';
+
+export type SaleData = {
+  0: string;
+  1: boolean;
+  2: boolean;
+  3: boolean;
+  4: boolean;
+  5: string;
+  6: BigNumber;
+  7: BigNumber;
+  8: BigNumber;
+  9: BigNumber;
+  10: BigNumber;
+  11: BigNumber;
+  12: BigNumber;
+  13: BigNumber;
+  amountOfTokensToSell: BigNumber;
+  earningsWithdrawn: boolean;
+  isCreated: boolean;
+  leftoverWithdrawn: boolean;
+  maxParticipation: BigNumber;
+  saleEnd: BigNumber;
+  saleOwner: string;
+  saleStart: BigNumber;
+  token: string;
+  tokenPriceInETH: BigNumber;
+  tokensDeposited: boolean;
+  tokensUnlockTime: BigNumber;
+  totalETHRaised: BigNumber;
+  totalTokensSold: BigNumber;
+};

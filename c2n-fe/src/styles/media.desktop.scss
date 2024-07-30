@@ -1,0 +1,26 @@
+@media (min-width: 769px) {
+  html {
+    font-size: 625%;
+  }
+  body, html,
+  header, footer,
+  .header, .footer{
+    min-width: 1220px;
+  }
+  .main-body{
+    min-width: 1220px;
+  }
+
+  .main-wrapper {
+    width: 100%;
+  }
+
+  .main-body {
+    width: 100%;
+    min-width: 1220px;
+  }
+  
+  .main-content {
+    width: 1220px;
+  }
+}

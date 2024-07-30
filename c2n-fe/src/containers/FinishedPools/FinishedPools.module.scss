@@ -1,0 +1,95 @@
+.finished-pools {
+  width: 100%;
+  position: relative;
+  padding-bottom: 64px;
+  color: #ffffff;
+}
+
+h2.title {
+  margin-top: 78px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 0.4rem;
+}
+
+.live-pool-list {
+  width: 100%;
+  margin-top: 62px;
+  color: #ffffff;
+  border-collapse: collapse;
+}
+
+.finish-pool-item {
+  width: 100%;
+  min-height: 130px;
+  padding: 0 34px;
+  border-bottom: 4px solid #000000;
+  margin-bottom: 4px;
+  font-size: 0.2rem;
+  background: #272727;
+  color: #dedede;
+  cursor: pointer;
+
+  &.header {
+    height: 90px;
+    min-height: 90px;
+
+    &:hover {
+      pointer-events: none;
+    }
+  }
+
+  > * {
+    padding: 25px;
+    white-space: nowrap;
+  }
+
+  &:hover {
+    background: #363636;
+  }
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  float: left;
+  border-radius: 50%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.product-name {
+  font-size: 0.24rem;
+  margin-top: 15px;
+}
+
+.describe {
+  font-size: 0.16rem;
+  white-space: normal;
+}
+
+.more-button {
+  width: 260px;
+  height: 54px;
+  border-radius: 10px;
+  margin: 60px auto;
+  background: #ffb852;
+  line-height: 54px;
+  font-size: 0.22rem;
+  text-align: center;
+  color: #000000;
+}
+
+.col2,
+.col3,
+.col4,
+.col5 {
+  text-align: center;
+}
+
+@media (max-width: 769px) {
+  .finish-pool-item {
+    padding: 0 10px;
+  }
+}

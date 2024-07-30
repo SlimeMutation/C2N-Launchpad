@@ -1,0 +1,288 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0x41dcb55D84E76Ef05D3E2128FE07060ee98C2bf1",
+    "txHash": "0x2041d48289c09fcb5c86fc2d40b54232f1b4780dad419eeaec248082c0ec5140"
+  },
+  "proxies": [
+    {
+      "address": "0xeDea6D05A3190f859C80CAF1B98662015a49CA21",
+      "txHash": "0x76e6b3b5a1c451575968b6d786ae8927d2e066cad6eaf6811c0af821921826be",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x36634D3b6FAC18f21c7Bf164fa7994EB9FE77BdF",
+      "txHash": "0x9267a10d5772f47cae156d975e32ebdbb8cf54ada6570a05310f927159758fb4",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xb9c1F221a4721c5E6F0a9684042F353EE3B78cdb",
+      "txHash": "0x0b4c8e9def38b843257398b9dc3db6ebfff33ded2d14cab6bd7033467d0b5b46",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xbac697afd78F30AFD60ED7749Be6dEdA21f84F8d",
+      "txHash": "0x997671662922aaa38dad21486fa5ddb2c70d718077bd1133e227c428fa28509b",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x05a79ac31632C5061921b91d91311c2a1647EB81",
+      "txHash": "0x6c5a435e65cc7c7f15f5851450155bc733b7b4d26e3ebd227496820618f187b6",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xB627f9DCd6164De3D914F265F405d30366D6Ac94",
+      "txHash": "0x3a6f57dfc739cca4a726a26233309c7a31c7b525de2a3b5352e6e9f296b54d62",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x6221e302756D6eC068816445664071DF35dE6f15",
+      "txHash": "0xca64514b4075f022e3f267106ede81d318e7ff5bd7ef0744ad62c97752828575",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "78842c593355d5670c8f8baab4e904bf7b87854001be2e7c69605de198681679": {
+      "address": "0x691e586f294DE112e82413aC12D4B2CeBa6923f1",
+      "txHash": "0xdbd9ec14770ecabc4d299d69cc99dbb2ba6fb32f5d09155368cb423bb95fca52",
+      "layout": {
+        "solcVersion": "0.6.12",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/Initializable.sol:25"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/Initializable.sol:30"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:31"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:20"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:74"
+          },
+          {
+            "label": "erc20",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_contract(IERC20)1144",
+            "contract": "AllocationStaking",
+            "src": "contracts/AllocationStaking.sol:45"
+          },
+          {
+            "label": "paidOut",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_uint256",
+            "contract": "AllocationStaking",
+            "src": "contracts/AllocationStaking.sol:47"
+          },
+          {
+            "label": "rewardPerSecond",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_uint256",
+            "contract": "AllocationStaking",
+            "src": "contracts/AllocationStaking.sol:49"
+          },
+          {
+            "label": "totalRewards",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_uint256",
+            "contract": "AllocationStaking",
+            "src": "contracts/AllocationStaking.sol:51"
+          },
+          {
+            "label": "salesFactory",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_contract(ISalesFactory)3882",
+            "contract": "AllocationStaking",
+            "src": "contracts/AllocationStaking.sol:53"
+          },
+          {
+            "label": "poolInfo",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_array(t_struct(PoolInfo)1860_storage)dyn_storage",
+            "contract": "AllocationStaking",
+            "src": "contracts/AllocationStaking.sol:55"
+          },
+          {
+            "label": "userInfo",
+            "offset": 0,
+            "slot": "107",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_struct(UserInfo)1849_storage))",
+            "contract": "AllocationStaking",
+            "src": "contracts/AllocationStaking.sol:57"
+          },
+          {
+            "label": "totalAllocPoint",
+            "offset": 0,
+            "slot": "108",
+            "type": "t_uint256",
+            "contract": "AllocationStaking",
+            "src": "contracts/AllocationStaking.sol:59"
+          },
+          {
+            "label": "startTimestamp",
+            "offset": 0,
+            "slot": "109",
+            "type": "t_uint256",
+            "contract": "AllocationStaking",
+            "src": "contracts/AllocationStaking.sol:62"
+          },
+          {
+            "label": "endTimestamp",
+            "offset": 0,
+            "slot": "110",
+            "type": "t_uint256",
+            "contract": "AllocationStaking",
+            "src": "contracts/AllocationStaking.sol:64"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_struct(PoolInfo)1860_storage)dyn_storage": {
+            "label": "struct AllocationStaking.PoolInfo[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(IERC20)1144": {
+            "label": "contract IERC20",
+            "numberOfBytes": "20"
+          },
+          "t_contract(ISalesFactory)3882": {
+            "label": "contract ISalesFactory",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_struct(UserInfo)1849_storage)": {
+            "label": "mapping(address => struct AllocationStaking.UserInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_struct(UserInfo)1849_storage))": {
+            "label": "mapping(uint256 => mapping(address => struct AllocationStaking.UserInfo))",
+            "numberOfBytes": "32"
+          },
+          "t_struct(PoolInfo)1860_storage": {
+            "label": "struct AllocationStaking.PoolInfo",
+            "members": [
+              {
+                "label": "lpToken",
+                "type": "t_contract(IERC20)1144",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "allocPoint",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "lastRewardTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "accERC20PerShare",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "totalDeposits",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_struct(UserInfo)1849_storage": {
+            "label": "struct AllocationStaking.UserInfo",
+            "members": [
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "rewardDebt",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "tokensUnlockTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "salesRegistered",
+                "type": "t_array(t_address)dyn_storage",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {}
+      }
+    }
+  }
+}
